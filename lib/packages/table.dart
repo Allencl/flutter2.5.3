@@ -8,12 +8,14 @@ class ListPageTableCross extends StatefulWidget {
 
   // final List<Object> columns;
   // final List<Object> data;
+  final String title;
   final List columns;
   final List data;
 
   
   const ListPageTableCross({
       Key ? key,
+      this.title='',
       required this.columns,
       required this.data,
   }) : super(key: key);
@@ -111,12 +113,12 @@ class _ListPageTableCross extends State<ListPageTableCross> {
               children: <Widget>[
                 Container(
                   padding: const EdgeInsets.fromLTRB(2,8,8,8),
-                  child: const Text('标题',
+                  child: Text(widget.title,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: TextStyle(
+                    style:const TextStyle(
                       // height: 2,
-                      color: Color.fromRGBO(81,90,110,1),
+                      color:  Color.fromRGBO(81,90,110,1),
                       fontWeight: FontWeight.w600,
                     ),
                   )

@@ -11,12 +11,14 @@ import 'package:wis_flutter2/packages/table.dart';      // 横向 table
 // ******  table 横向
 class WisListPageTableCross extends StatelessWidget {
 
+    final String title;   // 标题
     final List<Map> columns;  // 列
     final List<Map> data;  // 数据
 
 
     const WisListPageTableCross({
         Key ? key,
+        this.title="",
         required this.columns,
         required this.data,
     }) : super(key: key);
@@ -25,6 +27,7 @@ class WisListPageTableCross extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
       return ListPageTableCross(
+        title: title,
         columns: columns,
         data: data, 
       ); 

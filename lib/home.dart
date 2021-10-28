@@ -38,6 +38,7 @@ class _HomePage extends State<HomePage> {
                 [
 
                   const WisListPageTableCross(
+                    title:'等待队列',
                     columns:[
                         { "key":"name1","name":"姓名" },
                         { "key":"name2","name":"时间" },
