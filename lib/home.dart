@@ -37,6 +37,74 @@ class _HomePage extends State<HomePage> {
               delegate: SliverChildListDelegate(
                 [
 
+
+                  // 首页 body iocn 卡片
+                    Container(
+                    padding: const EdgeInsets.fromLTRB(8,8,8,8),
+                    margin:const EdgeInsets.fromLTRB(8,8,8,8),
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                        border:  Border.all(
+                          width:1,
+                          color: const Color(0xffe5e5e5) 
+                        )
+                    ),
+                    child: WisHomeBody(
+                      title:'页面示例',
+                      onClick:(option){
+                        // 点击事件
+                        // print(option);
+                      },
+                      children: const [
+                        {
+                          "text":"Table",
+                          "icons": Icons.view_list,
+                          "navigatorTarget": "/table"   // 跳转页面
+                        },
+                        {
+                          "text":"查询页面",
+                          "icons": Icons.search,
+                          "navigatorTarget": "/search"
+                        },
+                        {
+                          "text":"Tab页面",
+                          "icons": Icons.tab,
+                          "color":Colors.pink,
+                          "navigatorTarget": "/tab"
+                        },                              
+                        {
+                          "text":"表单示例",
+                          "icons": Icons.text_format,
+                          "color":Colors.yellow,
+                          "navigatorTarget": "/form"
+                        },
+                        {
+                          "text":"图文页面",
+                          "icons": Icons.view_list,
+                          "navigatorTarget": "/textImage"   // 跳转页面
+                        },
+                        {
+                          "text":"产品展示",
+                          "icons": Icons.search,
+                          "color": Colors.deepPurple, 
+                          "navigatorTarget": "/productToggle"
+                        },
+                        {
+                          "text":"按钮组",
+                          "icons": Icons.backup,
+                          "color": Colors.yellowAccent, 
+                          "navigatorTarget": "/btn"
+                        },                              
+                        {
+                          "text":"测试页面",
+                          "icons": Icons.text_format,
+                          "navigatorTarget": "/test"
+                        }
+                      ]
+                    )
+                  ),
+
+
                   const WisListPageTableCross(
                     title:'等待队列',
                     columns:[
