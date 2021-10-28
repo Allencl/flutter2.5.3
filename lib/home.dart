@@ -21,7 +21,7 @@ class _HomePage extends State<HomePage> {
       // appBar: AppBar( title: const Text('首页') ),  
       bottomNavigationBar: const WisBottomNavigationBar(),
       drawer: const WisLeftDrawer(),        
-      backgroundColor: Colors.blue[10],
+      backgroundColor: Colors.white,
       body:  CustomScrollView(
         slivers: [
 
@@ -39,15 +39,24 @@ class _HomePage extends State<HomePage> {
 
 
                   // 首页 body iocn 卡片
-                    Container(
+                  Container(
                     padding: const EdgeInsets.fromLTRB(8,8,8,8),
                     margin:const EdgeInsets.fromLTRB(8,8,8,8),
                     decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(4.0)),
-                        border:  Border.all(
-                          width:1,
-                          color: const Color(0xffe5e5e5) 
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+                      border:  Border.all(
+                        width:1,
+                        color: const Color.fromRGBO(0,0,0,0.1)
+                      ),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color.fromRGBO(0,0,0,0.2),
+                          offset: Offset(1.0,1.0), 
+                          blurRadius: 3.0, 
+                          spreadRadius: 0 
                         )
+                      ],
                     ),
                     child: WisHomeBody(
                       title:'页面示例',

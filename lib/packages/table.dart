@@ -104,15 +104,26 @@ class _ListPageTableCross extends State<ListPageTableCross> {
         padding: const EdgeInsets.fromLTRB(2,2,2,2),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-          border: Border.all(width:1,color:Colors.white),
+          borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+          border:  Border.all(
+            width:1,
+            color: const Color.fromRGBO(0,0,0,0.1)
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Color.fromRGBO(0,0,0,0.2),
+              offset: Offset(1.0,1.0), 
+              blurRadius: 3.0, 
+              spreadRadius: 0 
+            )
+          ],
         ),
         child: Column(
           children: <Widget>[
             Row(
               children: <Widget>[
                 Container(
-                  padding: const EdgeInsets.fromLTRB(2,8,8,8),
+                  padding: const EdgeInsets.fromLTRB(6,8,8,8),
                   child: Text(widget.title,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
