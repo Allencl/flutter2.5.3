@@ -36,6 +36,29 @@ class _HomePage extends State<HomePage> {
           SliverList(
               delegate: SliverChildListDelegate(
                 [
+
+                  const WisListPageTableCross(
+                    columns:[
+                        { "key":"name1","name":"姓名" },
+                        { "key":"name2","name":"时间" },
+                        { "key":"name3","name":"时间2" },
+
+                    ],
+                    data:[
+                        {
+                          "name1": "的的",
+                          "name2": "的的",
+                          "name3": "的的",
+                        },
+                        {
+                          "name1": "尔尔",
+                          "name2": "尔尔",
+                          "name3": "尔尔",
+                        }
+                    ]
+                  ),
+
+
                   const Text("2121212"),
                   const Text("2121212"),
                   const Text("2121212"),
