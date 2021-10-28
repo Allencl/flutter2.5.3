@@ -90,7 +90,6 @@ class _HomePageBodyICON extends StatelessWidget{
     final dynamic type;             // 卡片类型
 
 
-
     const _HomePageBodyICON({
         Key ? key,
         this.text="",
