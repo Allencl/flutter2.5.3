@@ -26,6 +26,7 @@ class ListPageTableCross extends StatefulWidget {
 
 class _ListPageTableCross extends State<ListPageTableCross> {
 
+    bool openActive=true;   // 展开 闭合
 
     // table init
     _tableRowInit() {
@@ -52,9 +53,15 @@ class _ListPageTableCross extends State<ListPageTableCross> {
       for (var i = 0; i < lenTitle; i++) {
         head = Container(                      
           padding: const EdgeInsets.fromLTRB(8,5,8,5),
-          decoration:const BoxDecoration(
-            color:  Color.fromRGBO(248,248,249,1)
-          ),
+          decoration: const BoxDecoration(
+            color:  Color.fromRGBO(248,248,249,1),
+            border: Border(
+              bottom: BorderSide(
+                width:1,
+                color: Color.fromRGBO(232,234,236,1)
+              )
+            )
+          ),          
           child: Text(
             columnsNow[i]['name'],
             textAlign: TextAlign.center,
@@ -78,6 +85,14 @@ class _ListPageTableCross extends State<ListPageTableCross> {
         for (var j = 0; j < lenTitle; j++) {
           row = Container(
             padding: const EdgeInsets.fromLTRB(8,5,8,5),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  width:1,
+                  color: Color.fromRGBO(232,234,236,1)
+                )
+              )
+            ),
             child:Text(
               dataNow[i][columnsNow[j]['key']],
               textAlign: TextAlign.center,
@@ -101,7 +116,7 @@ class _ListPageTableCross extends State<ListPageTableCross> {
     Widget build(BuildContext context) {
       return Container(
         margin: const EdgeInsets.fromLTRB(8,8,8,8),
-        padding: const EdgeInsets.fromLTRB(2,2,2,2),
+        padding: const EdgeInsets.fromLTRB(0,0,0,6),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
@@ -123,7 +138,7 @@ class _ListPageTableCross extends State<ListPageTableCross> {
             Row(
               children: <Widget>[
                 Container(
-                  padding: const EdgeInsets.fromLTRB(6,8,8,8),
+                  padding: const EdgeInsets.fromLTRB(6,0,8,0),
                   child: Text(widget.title,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
@@ -134,12 +149,33 @@ class _ListPageTableCross extends State<ListPageTableCross> {
                     ),
                   )
                 ),
+                const Expanded(child: Text("")),
+
+                IconButton(
+                  icon: openActive ?  const Icon(Icons.unfold_more):const Icon(Icons.unfold_less),
+                  iconSize: 18,
+                  color: Colors.blue,
+                  onPressed:(){
+                    setState(() {
+                      openActive=!openActive;
+                    });
+                  },
+                )
+                 
               ]
             ),
 
-            Table(
-              children:  _tableRowInit(),
-            ),
+            openActive ?
+              Table(
+                children:  _tableRowInit(),
+              )
+            : const Text(
+              '表格已隐藏！',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontSize: 12
+              ),              
+            )
           ]
         )
       );
