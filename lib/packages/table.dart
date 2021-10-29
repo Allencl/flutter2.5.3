@@ -165,17 +165,48 @@ class _ListPageTableCross extends State<ListPageTableCross> {
               ]
             ),
 
+            
+
+            AnimatedOpacity(
+              opacity: openActive ? 1.0 : 0.0,  
+              curve: Curves.fastOutSlowIn ,          
+              duration: const Duration(milliseconds: 800),
+                child: openActive ? 
+                  Table(
+                    children:  _tableRowInit(),
+                  )
+                  : 
+                  const Text("")
+            ),
+
             openActive ?
-              Table(
-                children:  _tableRowInit(),
-              )
-            : const Text(
+              const Text("")
+            :
+            const Text(
               '表格已隐藏！',
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontSize: 12
               ),              
             )
+
+            
+
+            // openActive ?
+            //   AnimatedOpacity(
+            //     opacity: openActive ? 1.0 : 0.0,
+            //     duration: const Duration(milliseconds: 500),
+            //       child: Table(
+            //         children:  _tableRowInit(),
+            //     )
+            //   )
+            //   : const Text(
+            //     '表格已隐藏！',
+            //     textAlign: TextAlign.left,
+            //     style: TextStyle(
+            //       fontSize: 12
+            //     ),              
+            //   )
           ]
         )
       );
