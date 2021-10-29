@@ -73,7 +73,7 @@ class _LoginPage extends State<LoginPage> {
                   },
                 ),
                 const SizedBox(
-                  height: 24,
+                  height: 22,
                 ),
 
                 TextFormField(
@@ -175,21 +175,22 @@ class _LoginPage extends State<LoginPage> {
                       return;
                     }
 
-                    showDialog<void>(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        title: const Text('Your story'),
-                        content: Text('用户名[$formName]  ---- 密码[$formPassword]'),
-                        actions: [
-                          TextButton(
-                            child: const Text('Done'),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                          ),
-                        ],
-                      ),
-                    );
+                    Navigator.pushNamed(context,"/home");
+                    // showDialog<void>(
+                    //   context: context,
+                    //   builder: (context) => AlertDialog(
+                    //     title: const Text('Your story'),
+                    //     content: Text('用户名[$formName]  ---- 密码[$formPassword]'),
+                    //     actions: [
+                    //       TextButton(
+                    //         child: const Text('Done'),
+                    //         onPressed: () {
+                    //           Navigator.of(context).pop();
+                    //         },
+                    //       ),
+                    //     ],
+                    //   ),
+                    // );
 
 
                   },

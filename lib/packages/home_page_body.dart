@@ -138,7 +138,7 @@ class _HomePageBodyICON extends StatelessWidget{
 
         return InkWell(
           onTap:(){
-            // if( navigatorTarget !=null ) Navigator.pushNamed(context,"$navigatorTarget");
+            if( navigatorTarget.isNotEmpty ) Navigator.pushNamed(context,navigatorTarget);
             onClick(target);
           },
           child: Container(
