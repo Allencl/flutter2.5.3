@@ -6,7 +6,21 @@ import 'package:wis_flutter2/packages/home_head.dart';  // 自定义 头部导�
 import 'package:wis_flutter2/packages/divider.dart';    // 线
 import 'package:wis_flutter2/packages/table.dart';      // 横向 table               
 import 'package:wis_flutter2/packages/home_page_body.dart';      // 首页卡片              
+import 'package:wis_flutter2/packages/scan.dart';      // 扫码              
 
+
+// 扫码
+class WisScan extends StatelessWidget {
+
+    const WisScan({
+      Key ? key,
+    }) : super(key: key);
+
+    @override
+    Widget build(BuildContext context) {
+      return const WisScanComps(); 
+    }
+}
 
 
 // ******  home页 body
