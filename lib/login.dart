@@ -11,9 +11,14 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPage extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
+  
+
   String? formName;
   String? formPassword;
+
   // bool? agreedToTerms = false;
+  bool showPassword=false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +59,12 @@ class _LoginPage extends State<LoginPage> {
                     }
                   },
                   decoration: const InputDecoration(
-                    filled: true,
+                    // filled: true,
                     hintText: '用户名',
                     labelText: '请输入用户名',
+                    prefixIcon: Icon(
+                      Icons.person
+                    )
                   ),
                   onChanged: (value) {
                     setState(() {
@@ -69,15 +77,30 @@ class _LoginPage extends State<LoginPage> {
                 ),
 
                 TextFormField(
+                  obscureText: !showPassword,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return '请输入密码！';
                     }
                   },
-                  decoration: const InputDecoration(
-                    filled: true,
+                  decoration: InputDecoration(
+                    // filled: true,
                     hintText: '密码',
                     labelText: '请输入密码',
+                    prefixIcon: const Icon(
+                      Icons.vpn_key
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        showPassword?Icons.visibility:Icons.visibility_off,
+                        color: showPassword?Colors.blue:Colors.grey,
+                      ),
+                      onPressed:(){
+                        setState(() {
+                          showPassword=!showPassword;
+                        });
+                      },
+                    )
                   ),
                   onChanged: (value) {
                     setState(() {
