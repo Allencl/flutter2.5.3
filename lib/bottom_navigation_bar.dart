@@ -14,19 +14,13 @@ class _WisBottomNavigationBar extends State<WisBottomNavigationBar> {
 
   int _selectedIndex = 0;
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }  
-
   @override
   Widget build(BuildContext context) {
       return  BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: '首页',
+            label: '首页',        
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
@@ -39,7 +33,19 @@ class _WisBottomNavigationBar extends State<WisBottomNavigationBar> {
         ],
         selectedItemColor: Colors.blue[10],
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped
+        onTap: (index){
+          setState(() {
+            _selectedIndex = index;
+          });
+
+          // 页面跳转
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context,"/");
+            break;
+              default:
+          }
+        }
       );
   }
 }

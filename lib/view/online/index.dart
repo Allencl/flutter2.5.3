@@ -208,7 +208,18 @@ class _OnlinePage extends State<OnlinePage> {
                     ),  
                     child: const Text("不合格录入"),
                     onPressed: (){
-                      //
+                      ScaffoldMessenger.of(context).showSnackBar(
+                         SnackBar(
+                          backgroundColor:const Color.fromRGBO(25,190,107,0.5),
+                          content: Row(
+                            children: const<Widget>[
+                              Icon(Icons.done,color: Colors.white),
+                              SizedBox(width:10,child:Text('')),
+                              Text('操作成功！'),
+                            ],
+                          )
+                        )
+                      );
                     },
                   ),
                 ),
@@ -227,7 +238,7 @@ class _OnlinePage extends State<OnlinePage> {
                   flex: 5,
                   child:  ElevatedButton(
                     style:ButtonStyle(
-                      backgroundColor:MaterialStateProperty.all(Colors.green[900]),
+                      backgroundColor:MaterialStateProperty.all(Colors.green[700]),
                     ),                     
                     child: const Text("HOLD"),
                     onPressed: (){
