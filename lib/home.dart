@@ -67,9 +67,9 @@ class _HomePage extends State<HomePage> {
                       },
                       children: const [
                         {
-                          "text":"登录",
+                          "text":"产品上线",
                           "icons": Icons.view_list,
-                          "navigatorTarget": "/login"   // 跳转页面
+                          "navigatorTarget": "/online"   
                         },
                         {
                           "text":"查询页面",

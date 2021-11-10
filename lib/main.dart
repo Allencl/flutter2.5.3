@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:wis_flutter2/home.dart';     // 首页
 import 'package:wis_flutter2/login.dart';    // 登录页
-
+import 'package:wis_flutter2/view/online/index.dart';    // 上线
 
 
 
@@ -19,11 +19,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        initialRoute: '/login',
+        initialRoute: '/',
         routes: <String, WidgetBuilder> { 
           '/': (BuildContext context) => const HomePage(),
           '/home': (BuildContext context) => const HomePage(),
           '/login': (BuildContext context) => const LoginPage(),
+          '/online': (BuildContext context) => const OnlinePage(),
+
         },               
     );
   }

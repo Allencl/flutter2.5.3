@@ -115,8 +115,8 @@ class _ListPageTableCross extends State<ListPageTableCross> {
     @override
     Widget build(BuildContext context) {
       return Container(
-        margin: const EdgeInsets.fromLTRB(8,8,8,8),
-        padding: const EdgeInsets.fromLTRB(0,0,0,6),
+        margin: const EdgeInsets.fromLTRB(0,6,0,6),
+        padding: const EdgeInsets.fromLTRB(0,0,0,0),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
