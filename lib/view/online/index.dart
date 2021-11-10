@@ -25,7 +25,6 @@ class _OnlinePage extends State<OnlinePage> {
           children: <Widget>[
 
             const SizedBox(height:22,child:Text('')),
-
             Row(
               children: <Widget>[
                  const Expanded(
