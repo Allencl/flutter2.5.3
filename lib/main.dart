@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:wis_flutter2/home.dart';     // 首页
 import 'package:wis_flutter2/login.dart';    // 登录页
-import 'package:wis_flutter2/view/online/index.dart';    // 上线
-
+import 'package:wis_flutter2/view/online/index.dart';         // 上线
+import 'package:wis_flutter2/view/getMaterial/index.dart';    // 叫料
 
 
 void main() {
@@ -25,6 +25,9 @@ class MyApp extends StatelessWidget {
           '/home': (BuildContext context) => const HomePage(),
           '/login': (BuildContext context) => const LoginPage(),
           '/online': (BuildContext context) => const OnlinePage(),
+          '/getMaterial': (BuildContext context) => const GetMaterialPage(),
+
+          
 
         },               
     );

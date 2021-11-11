@@ -72,9 +72,9 @@ class _HomePage extends State<HomePage> {
                           "navigatorTarget": "/online"   
                         },
                         {
-                          "text":"查询页面",
+                          "text":"叫料",
                           "icons": Icons.search,
-                          "navigatorTarget": "/search"
+                          "navigatorTarget": "/getMaterial"
                         },
                         {
                           "text":"Tab页面",
@@ -136,54 +136,6 @@ class _HomePage extends State<HomePage> {
                         }
                     ]
                   ),
-
-
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
-                  const Text("2121212"),
 
                   const WisDivider(
                     text: "到底了",
